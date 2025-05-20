@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#for-message-brokers" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -313,6 +318,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Connections
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -324,6 +342,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-message-brokers" class="md-nav__link">
+    <span class="md-ellipsis">
+      For message brokers:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      For databases:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-rest-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      For REST APIs:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -625,6 +687,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-message-brokers" class="md-nav__link">
+    <span class="md-ellipsis">
+      For message brokers:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      For databases:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-rest-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      For REST APIs:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -645,9 +742,7 @@
   <h1>Connections</h1>
 
 <p>Connections are the way to connect to a data source. They are defined using the following syntax:</p>
-<ul>
-<li>For message brokers:</li>
-</ul>
+<h2 id="for-message-brokers">For message brokers:</h2>
 <pre><code>Broker&lt;MQTT&gt; HomeMQTT
     host: 'localhost'
     port: 1883
@@ -693,13 +788,9 @@ end
 </code></pre>
 <ul>
 <li><strong>host</strong>: Host IP address or hostname for the Websocket</li>
-<li>
-<p><strong>port</strong>: Websocket Port number</p>
-</li>
-<li>
-<p>For databases:</p>
-</li>
+<li><strong>port</strong>: Websocket Port number</li>
 </ul>
+<h2 id="for-databases">For databases:</h2>
 <pre><code>Database&lt;MongoDB&gt; HomeMongoDB
     host: 'localhost'
     port: 27017
@@ -729,10 +820,8 @@ end
 <li><strong>password</strong>: Password used for authentication</li>
 </ul>
 </li>
-<li>
-<p>For REST APIs:</p>
-</li>
 </ul>
+<h2 id="for-rest-apis">For REST APIs:</h2>
 <pre><code>RestApi MyRestApi
     host: 'http://localhost'
     port: 8000

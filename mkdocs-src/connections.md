@@ -1,6 +1,6 @@
 Connections are the way to connect to a data source. They are defined using the following syntax:
 
--   For message brokers:
+## For message brokers:
 
 ```
 Broker<MQTT> HomeMQTT
@@ -50,7 +50,7 @@ end
 -   **host**: Host IP address or hostname for the Websocket
 -   **port**: Websocket Port number
 
--   For databases:
+## For databases:
 
 ```
 Database<MongoDB> HomeMongoDB
@@ -80,7 +80,7 @@ end
     -   **username**: Username used for authentication
     -   **password**: Password used for authentication
 
--   For REST APIs:
+## For REST APIs:
 
 ```
 RestApi MyRestApi
