@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="assets/logo_ball.png" />
+        <title>WebDSL</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#8b5cf6", // violet-500
+                            dark: "#0d0d12",
+                            muted: "#1e1e26",
+                            soft: "#a78bfa"
+                        }
+                    }
+                }
+            };
+        </script>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-8px);
+                }
+            }
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+        </style>
+    </head>
+    <body class="bg-dark text-white font-sans antialiased">
+        <nav class="bg-muted/80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="#" class="flex-shrink-0 flex items-center">
+                            <img
+                                class="h-8 w-auto"
+                                src="assets/logo_ball.png"
+                                alt="WebDSL Logo"
+                            />
+                            <span class="ml-2 text-xl font-semibold text-white"
+                                >WebDSL</span
+                            >
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a
+                                href="#"
+                                class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+                                >Home</a
+                            >
+                            <a
+                                href="#features"
+                                class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+                                >Features</a
+                            >
+                            <a
+                                href="./docs/index.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+                                >Documentation</a
+                            >
+                            <a
+                                href="https://github.com/giannisgkountras/web-dsl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"
+                                >GitHub</a
+                            >
+                        </div>
+                    </div>
+                    <!-- Mobile menu button (optional) -->
+                </div>
+            </div>
+        </nav>
+        <!-- HERO -->
+        <section
+            class="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 py-10 bg-gradient-to-br from-dark via-muted to-dark"
+        >
+            <div
+                class="flex flex-col sm:flex-row justify-center items-center mb-6 space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+                <img
+                    src="assets/logo_ball.png"
+                    alt="WebDSL Logo"
+                    class="w-20 h-20 sm:w-24 sm:h-24 animate-float"
+                />
+                <img
+                    src="assets/logo_word.png"
+                    alt="WebDSL"
+                    class="w-64 sm:w-96"
+                />
+            </div>
+
+            <p
+                class="text-base sm:text-lg md:text-xl max-w-xl text-gray-300 mb-8 px-2"
+            >
+                A modern domain-specific language for generating full-stack web
+                apps with minimal effort.
+            </p>
+
+            <div class="flex gap-4 flex-wrap justify-center">
+                <a
+                    href="#get-started"
+                    class="bg-primary hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition shadow-lg"
+                >
+                    Get Started
+                </a>
+                <a
+                    href="#features"
+                    class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-semibold transition"
+                >
+                    Learn More
+                </a>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="py-24 px-6 bg-[#141419] text-gray-300">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2
+                    class="text-4xl sm:text-5xl font-extrabold mb-6 text-primary animate-fade-in"
+                >
+                    Why WebDSL?
+                </h2>
+                <p
+                    class="text-lg sm:text-xl max-w-3xl mx-auto mb-16 text-gray-400 animate-fade-in delay-100"
+                >
+                    WebDSL makes web app development fast, structured, and
+                    deployment-ready with minimal effort.
+                </p>
+
+                <div
+                    class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-left"
+                >
+                    <!-- Feature Card -->
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🧠 Easy to Learn
+                        </h3>
+                        <p>
+                            Simple, declarative syntax lets you generate
+                            full-stack apps quickly without boilerplate or
+                            complexity.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up delay-100"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🐳 Docker-Ready
+                        </h3>
+                        <p>
+                            Generated code is containerized by default, letting
+                            you deploy instantly using Docker and Compose.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up delay-200"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🔁 Transform OpenAPI
+                        </h3>
+                        <p>
+                            Import OpenAPI specs and transform into full-blown
+                            applications.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🚀 Super Fast
+                        </h3>
+                        <p>
+                            Define your apps in seconds. WebDSL takes care of
+                            routing, UI scaffolding, and backend logic.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up delay-100"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🧠 Smart Abstractions
+                        </h3>
+                        <p>
+                            Model data, components, and behavior in one place.
+                            WebDSL maps everything cleanly to code.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up delay-200"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🎛️ Reactive Dashboards
+                        </h3>
+                        <p>
+                            Build real-time dashboards with charts, filters, and
+                            tables powered by live data sources.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🔌 Seamless Integration
+                        </h3>
+                        <p>
+                            Connect Databases, APIs and Message Brokers with
+                            ease.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up delay-100"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            🧩 Fully Extensible
+                        </h3>
+                        <p>
+                            WebDSL generates clean React and FastAPI code,
+                            making it easy to extend, customize, or scale.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#1e1e24] p-6 rounded-2xl shadow-lg hover:shadow-primary/30 transition duration-300 animate-slide-up delay-200"
+                    >
+                        <h3 class="text-xl font-semibold mb-3">
+                            📚 Maintainable & Readable
+                        </h3>
+                        <p>WebDSL syntax is clean and intuitive.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="py-24 px-6 bg-[#12121a] text-gray-300">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold text-primary mb-6">
+                    App Examples
+                </h2>
+                <p class="mb-10 text-gray-400 text-lg">
+                    Visuals of apps generated by WebDSL.
+                </p>
+
+                <!-- Carousel container -->
+                <div class="relative w-full overflow-hidden rounded-xl">
+                    <div
+                        class="carousel-images h-[29rem] relative rounded-xl shadow-lg overflow-hidden"
+                    >
+                        <img
+                            src="assets/example1.png"
+                            class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
+                        />
+                        <img
+                            src="assets/example2.png"
+                            class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
+                        />
+                        <img
+                            src="assets/example3.png"
+                            class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
+                        />
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div
+                        class="absolute inset-0 flex items-center justify-between px-4"
+                    >
+                        <button
+                            onclick="prevSlide()"
+                            class="bg-muted bg-opacity-70 text-white px-3 py-2 rounded-full hover:bg-opacity-100"
+                        >
+                            &#10094;
+                        </button>
+                        <button
+                            onclick="nextSlide()"
+                            class="bg-muted bg-opacity-70 text-white px-3 py-2 rounded-full hover:bg-opacity-100"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let current = 0;
+            const images = document.querySelectorAll(".carousel-image");
+
+            function showSlide(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle("opacity-100", i === index);
+                    img.classList.toggle("opacity-0", i !== index);
+                });
+            }
+
+            function nextSlide() {
+                current = (current + 1) % images.length;
+                showSlide(current);
+            }
+
+            function prevSlide() {
+                current = (current - 1 + images.length) % images.length;
+                showSlide(current);
+            }
+
+            // Optional: autoplay
+            setInterval(nextSlide, 5000); // change every 5 seconds
+        </script>
+        <!-- CTA -->
+        <section id="get-started" class="py-24 bg-[#111118] text-center">
+            <h2 class="text-4xl font-bold text-primary mb-4">
+                Ready to Build?
+            </h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Start using WebDSL and generate full apps in minutes.
+            </p>
+            <a
+                href="./docs/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 transition"
+            >
+                Try WebDSL Now
+            </a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="py-8 text-center text-gray-500 text-sm bg-[#0c0c13]">
+            © 2025 WebDSL. Developed by Giannis Gkountras.
+        </footer>
+    </body>
+</html>
