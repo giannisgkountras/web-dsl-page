@@ -1,6 +1,6 @@
 Data sources are the specific endpoints, queries or topics that are used to retrieve or send data. They are defined using the following syntax:
 
-## For message brokers:
+## For message brokers
 
 ```
 BrokerTopic TopicName
@@ -12,7 +12,7 @@ end
 -   **connection**: The name of the connection to the message broker
 -   **topic**: The topic to subscribe or publish to
 
-## For databases:
+## For databases
 
 ```
 MySQLQuery MyQueryName
@@ -32,7 +32,7 @@ end
 -   **collection**: The name of the collection to query (for MongoDB)
 -   **filter**: The filter to apply to the query (optional for MongoDB)
 
-## For REST APIs:
+## For REST APIs
 
 ```
 RestEndpoint EndpointName
