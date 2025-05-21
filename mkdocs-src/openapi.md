@@ -8,8 +8,9 @@ WebDSL allows you to enhance the OpenAPI specification by using a custom header 
 
 ```yaml
 x-webdsl:
-    - this.id -> Gauge @ 1,1
-    - this[0].title -> Text @ 1,2
+    - response.id -> Gauge @ 1,1
+    - response[0].title -> Text @ 1,2
+    - LineChart
 ```
 
 In this example:
@@ -18,12 +19,14 @@ A Gauge component will be generated from the id field of the response.
 
 A Text component will be generated from the title field of the first item in the response array.
 
+A LineChart component will be generated with boilerplate code to fill.
+
 The @ 1,1 and @ 1,2 specify the row and column positions of the components (1-indexed).
 
 To transform an OpenAPI specification into a WebDSL model, execute:
 
 ```bash
-webdsl openapi <openapi_file> <output_dir>
+webdsl transform openapi <openapi_file> <output_file>
 ```
 
-If the OpenAPI file is valid, the generated WebDSL model will be placed in the specified output directory. If no output dir is provided, the code will be generated in the current directory.
+If the OpenAPI file is valid, the generated WebDSL model will be placed in the specified output directory with the specified file name.. If no output dir is provided, the code will be generated in the current directory.

@@ -708,17 +708,19 @@
 <h2 id="augmenting-openapi-with-webdsl">Augmenting OpenAPI with WebDSL</h2>
 <p>WebDSL allows you to enhance the OpenAPI specification by using a custom header on specific endpoints. You can add the following annotation to generate UI components:</p>
 <pre><code class="language-yaml">x-webdsl:
-    - this.id -&gt; Gauge @ 1,1
-    - this[0].title -&gt; Text @ 1,2
+    - response.id -&gt; Gauge @ 1,1
+    - response[0].title -&gt; Text @ 1,2
+    - LineChart
 </code></pre>
 <p>In this example:</p>
 <p>A Gauge component will be generated from the id field of the response.</p>
 <p>A Text component will be generated from the title field of the first item in the response array.</p>
+<p>A LineChart component will be generated with boilerplate code to fill.</p>
 <p>The @ 1,1 and @ 1,2 specify the row and column positions of the components (1-indexed).</p>
 <p>To transform an OpenAPI specification into a WebDSL model, execute:</p>
-<pre><code class="language-bash">webdsl openapi &lt;openapi_file&gt; &lt;output_dir&gt;
+<pre><code class="language-bash">webdsl transform openapi &lt;openapi_file&gt; &lt;output_file&gt;
 </code></pre>
-<p>If the OpenAPI file is valid, the generated WebDSL model will be placed in the specified output directory. If no output dir is provided, the code will be generated in the current directory.</p>
+<p>If the OpenAPI file is valid, the generated WebDSL model will be placed in the specified output directory with the specified file name.. If no output dir is provided, the code will be generated in the current directory.</p>
 
 
 

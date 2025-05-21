@@ -33,3 +33,5 @@ Entity NewEntityName overloads OldEntityName
         - attribute_name: attribute_type
 end
 ```
+
+When overloading an entity, any property that is not specified will be inherited from the original entity. This includes the `source`, `strict`, `interval` and `attributes` properties.

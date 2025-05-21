@@ -5,7 +5,7 @@ of models defined in other files.
 ```
 // webpage.wdsl
 
-import "screens.wdsl"
+import screens.wdsl
 
 Webpage MyWebpage
     author: ""
@@ -26,7 +26,7 @@ Webpage MyWebpage
 
 ```
 // screens.wdsl
-import "components.wdsl"
+import components.wdsl
 
 Screen Home
     title: "Home"
